@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luas Dan Keliling Bangun Datar Segitiga</title>
+  <style>
+    *{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .tengah{
+      display:flex;
+      justify-content: center;
+    }
+    .card{
+      width: 40%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0,2);
+      transition: 0,3s;
+    }
+    #txBARU{
+      font-size: 20px;
+    }
+    .cardbody{
+      padding: 2px 16px;
+    }
+    .cardfooter{
+      padding: 8px;
+      background-color: azure;
+      display: flex;
+      justify-self: right;
+    }
+    label{
+      font-weight: bold;
+      font-size: 14px;
+    }
+    input[type=text]{
+      width: 100%;
+      padding: 2px;
+      margin: 8px 0;
+    }
+    button{
+      border: none;
+      border-radius: 8px;
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      padding: 8px 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="tengah">
+
+  <div class="card">
+
+
+  <h1 id="txBARU">Ruang Bangun Datar Segitiga</h1>
+  <div class="cardbody">
+    <form>
+      <label> Nilai Alas/SisiA(cm)</label>
+      <input type="text"name="txSISIA" id="txSISIA">
+      <label>Nilai SisiB(cm)</label>
+      <input type="text"name="txSISIB" id="txSISIB"
+      <label>Nilai SisiC(cm)</label>
+      <input type="text"name="txSISIC" id="txSISIC">
+      <label>Nilai Tinggi(cm)</label>
+      <input type="text"name="txTINGGI" id="txTINGGI">
+    </form>
+
+    <div id="txHASIL">Nilai Luas Dan Keliling</div>
+
+    </div>
+
+    <div class="cardfooter">
+  <button onclick="pesan()">JAWABAN</button>
+</div>
+</div>
+</div>
+
+  <script>
+    function pesan(){
+      //alert("Belajar Javascript")
+      let SA=document.getElementById("txSISIA").value
+      let SB=document.getElementById("txSISIB").value
+      let SC=document.getElementById("txSISIC").value
+      let T=document.getElementById("txTINGGI").value
+
+      //proses hitung Luas
+      let LUAS = 1/2*SA*T
+      let SAT =parseFloat(SA)+Number(T)
+      let KEL=SA+SB+SC
+
+      let txHASIL="Hitung Luas Segitiga<br>Luas=1/2*ALAS*TINGGI<br>"
+      hsl +="Luas ="+1/2+"X"+SA+"X"+T+"<br>"
+      hsl +="Luas ="+LUAS+"M<sup>2</sup><br>"
+      hsl="Keliling=SisiA+SisiB+SisiC<br>"
+      hsl+="Keliling="+SA+"+"+SB+"+"+SC+"<br>"
+      hsl+="Keliling="+KEL+"cm"
+
+      document.getElementById("txHASIL").innerHTML=hsl
+
+    }
+  </script>
+</body>
+</html>
